@@ -49,3 +49,18 @@ docker run -d "image name"
 #---- Make it able to communicate to outsite
 # Add enviroment variables: -e | Find environmental variables at docker hub image documentation
 docker create --name "container name" -e "variable1 name"="variable1 parameter" -e "variable2 name"="variable2 parameter" "image name"
+
+
+#---- NETWORK
+# List all networks available
+docker network ls
+# Create a network
+docker network create "network name"
+# Remove a network
+docker network rm "network name"
+# Add a network to container creation
+docker create --name monguito -p27017:27017 --network mesh "image name" -e "variable1 name"="variable1 value" -e "variable2 name"="variable2 value"
+
+
+#---- Build images brom DOCKERFILE
+docker build -t "container name":"tag1" "path to DOCKERFILE"
