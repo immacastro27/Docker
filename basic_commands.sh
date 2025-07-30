@@ -45,3 +45,7 @@ docker run "image name"
 # Detached mode - to keep running containers and get back console use
 docker run -d "image name"
 
+
+#---- Make it able to communicate to outsite
+# Add enviroment variables: -e | Find environmental variables at docker hub image documentation
+docker create --name "container name" -e "variable1 name"="variable1 parameter" -e "variable2 name"="variable2 parameter" "image name"
