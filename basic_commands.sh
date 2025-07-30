@@ -64,3 +64,14 @@ docker create --name monguito -p27017:27017 --network mesh "image name" -e "vari
 
 #---- Build images brom DOCKERFILE
 docker build -t "container name":"tag1" "path to DOCKERFILE"
+
+
+#---- DOCKER Compose
+# Needs to Dockerfile and docker-compose.yml to load the app into containers
+# Create containers/network/build images
+docker compose up
+# Remove containers/network previously created
+docker compose down
+
+
+#---- Volumes
